@@ -1,0 +1,61 @@
+.Header {
+  
+  .headerBlackBlock {
+    background-color: black;
+    padding: 20px 0;
+    margin: 10px;
+    .headerBlackBlockFont {
+      font-family: Arial;
+      font-size: 34px;
+      font-weight: 700;
+      text-align: center;
+      color: white;
+    }
+  }
+  .headerPagesBlock {
+    .border {
+      border-bottom: 1px solid silver;
+    } 
+    .bar {
+      padding: 0 34px;
+      .logo {
+        padding: 10px 20px 10px 0;
+      }
+      ul {
+        li {
+          padding-top: 14px;
+          padding-bottom: 12px;
+          font-size: 10px;
+          margin-right: 20px;
+          .barIcon {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+    .second-bar{
+      .barIcon {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+      }
+      padding: 0 34px;
+      .logo {
+        padding: 10px 20px 10px 0;
+      }
+      ul {
+        li {
+          padding-top: 14px;
+          padding-bottom: 12px;
+          font-weight: 500;
+          font-size: 12px;
+          margin-right: 20px;
+        }
+      }
+    } 
+  }
+}
+
+

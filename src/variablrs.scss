@@ -1,0 +1,140 @@
+//colors
+
+$dark: #283045;
+$darker:#000;
+$secondary-gray: #979797;
+$secondary-black: #3E4B5B;
+$secondary-green: #17A9BA;
+$secondary-orange: #F2B927;
+$secondary-white: #ffffff;
+
+//fonts
+
+$small-font-size: 14px;
+$medium-font-size: 16px;
+$large-font-size: 18px;
+$extraLarge-font-size: 24px;
+$doubleExtraLarge-font-size: 36px;
+$big-font-size:60px;
+$bigger-font-size: 75px;
+
+// other
+$bar-width: 40px;
+$bar-height: 4px;
+$bar-spacing: 10px;
+.section {
+  min-height: 100vh;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  color: $secondary-black;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+html,body {
+  width: 100%;
+  height: 100%;
+}
+
+#root {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+body {
+  min-height: 100%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  &.darkMode {
+    background-color: $dark;
+  }
+}
+
+//Global styles for creating flexible components
+
+.withStretch {
+  display: flex;
+  flex-grow: 1;
+  align-items: flex-start;
+}
+
+.image-centering {
+  background-size: cover;
+  background-position: center center;
+  transform: scale(1.03);
+}
+
+.page-content {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+
+.flexible {
+  display: flex;
+  &.horizontal {
+    flex-direction: row;
+  }
+  &.vertical {
+    flex-direction: column;
+  }
+  &.vertical-reverse {
+    flex-direction: column-reverse;
+  }
+  &.jStart {
+    justify-content: flex-start;
+  }
+  &.jEnd {
+    justify-content: flex-end;
+  }
+  &.jCenter {
+    justify-content: center;
+  }
+  &.jAround {
+    justify-content: space-around;
+  }
+  &.jBetween {
+    justify-content: space-between;
+  }
+  &.aStart {
+    align-items: flex-start;
+  }
+  &.aEnd {
+    align-items: flex-end;
+  }
+  &.aCenter {
+    align-items: center;
+  }
+  &.wrap {
+    flex-wrap: wrap;
+  }
+  &.noWrap {
+    flex-wrap: nowrap;
+  }
+  &.grow {
+    flex-grow: 1;
+  }
+  &.noGrow {
+    flex-grow: 0;
+  }
+  &.shrink {
+    flex-shrink: 1;
+  }
+  &.noShrink {
+    flex-shrink: 0;
+  }
+}
