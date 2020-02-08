@@ -1,12 +1,12 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-import { TiLocationOutline, TiSupport } from 'react-icons/ti';
+import {us, am} from '../../assets';
 import { GoPlus } from 'react-icons/go';
 import { FaBuffer } from 'react-icons/fa';
 import { Image } from '../../components';
 import { FiShoppingCart } from 'react-icons/fi';
-import {us, am} from '../../assets';
+import { TiLocationOutline, TiSupport } from 'react-icons/ti';
 
 import '../../variablrs.scss';
 import './style.scss';
@@ -14,10 +14,6 @@ import './style.scss';
 const Header = () => {
     return (
        <div className='Header'>
-           <div className='headerBlackBlock'>
-               <p className='headerBlackBlockFont'>WARNING: This product contains nicotine. </p>
-               <p className ='headerBlackBlockFont'> Nicotine is an addictive chemical.</p>
-           </div>
            <div className='headerPagesBlock '>
                 <div className='border'>
                     <div className='bar flexible jBetween page-content'>

@@ -1,24 +1,39 @@
 import React from 'react';
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-} from "react-router-dom";
-import { Main } from './containers';
-import { Header } from './layouts';
+import { connect } from 'react-redux';
 
-const  App = () => {
-  return (
-    <>
-      <Header />
-      <Router>
-          <Switch>
-              <Route exact path="/" component={Main} />
-          </Switch>
-      </Router>
-    </>
-  );
+import en from './translate/en';
+import am from './translate/am';
+
+console.log(en, am);
+
+const langs = {
+    am,
+    en
 }
 
-export default App;
+const App = (props) => {
+    console.log(props.language);
+    
+    return(
+        <div> 
+            <span>{langs[props.language].hello}</span>
+            <div>
+                <button onClick={() => props.changeLang('am')}>AM</button>
+                <button onClick={() => props.changeLang('en')}>EN</button>
+            </div>
+        </div>
+    )
+};
+
+
+
+export default connect(
+    state => ({
+        language: state.language.lang
+    }),
+    dispatch => ({
+        changeLang(lang){
+            dispatch({type: 'CHANGE_LANG', payload: lang});
+        }
+    })
+)(App);

@@ -1,18 +1,10 @@
 .Header {
-  
-  .headerBlackBlock {
-    background-color: black;
-    padding: 20px 0;
-    margin: 10px;
-    .headerBlackBlockFont {
-      font-family: Arial;
-      font-size: 34px;
-      font-weight: 700;
-      text-align: center;
-      color: white;
-    }
-  }
+  position: sticky;
+  top: 0;
   .headerPagesBlock {
+    position: -webkit-sticky;
+  position: sticky;
+  top: 0;
     .border {
       border-bottom: 1px solid silver;
     } 
